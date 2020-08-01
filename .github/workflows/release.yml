@@ -5,7 +5,7 @@ on:
     branches: [ master ]
 
 jobs:
-  echo:
+  Test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -19,4 +19,6 @@ jobs:
       - name: Run tests
         run: npm run test
       - name: Create new release
+        env:
+          GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         run: npx semantic-release
