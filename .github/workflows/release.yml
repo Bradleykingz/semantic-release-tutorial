@@ -1,7 +1,7 @@
 name: Hello World
 
 on:
-  merge:
+  push:
     branches: [ master ]
 
 jobs:
@@ -11,11 +11,11 @@ jobs:
       - name: Checkout source code
         uses: actions/checkout@v2
       - name: Use NodeJS v12.16
-          uses: actions/setup-node@v1
-          with:
-            node-version: 12.16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.16
       - name: Install dependencies
-          run: npm ci
+        run: npm ci
       - name: Run tests
         run: npm run test
       - name: Create new release
