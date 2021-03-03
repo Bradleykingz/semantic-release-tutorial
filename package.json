@@ -15,7 +15,7 @@
     "http-errors": "~1.6.3",
     "mocha": "^8.1.0",
     "morgan": "~1.9.1",
-    "pug": "^3.0.0"
+    "pug": "^3.0.1"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",
